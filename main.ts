@@ -42,6 +42,15 @@ namespace bottyboy {
             `)    
     }
     
+
+    //% block
+    export function moveTest() {
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED1, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED2, 100, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED4, 100, 67)
+    }
+
 }
 
 
