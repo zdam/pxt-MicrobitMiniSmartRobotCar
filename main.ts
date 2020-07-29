@@ -17,4 +17,5 @@ basic.forever(function () {
     basic.pause(200)
     strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     basic.pause(200)
+    basic.pause(200)
 })
