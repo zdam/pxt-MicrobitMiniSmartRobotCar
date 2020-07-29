@@ -44,22 +44,22 @@ namespace bottyboy {
     
 
     //% block
-    export function moveForwardForTime(time) {
+    export function moveForwardForTime(time: number) {
         executeForTimeLength(time, moveForward, stopMoving)
     }
 
     //% block
-    export function moveBackwardForTime(time) {
+    export function moveBackwardForTime(time: number) {
         executeForTimeLength(time, moveBackward, stopMoving)
     }
     
     //% block
-    export function turnLeftForTime(time) {
+    export function turnLeftForTime(time: number) {
         executeForTimeLength(time, turnLeft, stopMoving)
     }     
 
     //% block
-    export function turnRightForTime(time) {
+    export function turnRightForTime(time: number) {
         executeForTimeLength(time, turnRight, stopMoving)
     }    
 
@@ -104,7 +104,11 @@ namespace bottyboy {
     }    
 
     //% block
-    export function executeForTimeLength(time, runFunction, endFunction) {
+    export function executeForTimeLength(
+        time: number,
+        runFunction: () => void,
+        endFunction: () => void
+    ) {
         let innerTime = time
         runFunction()
         while (innerTime >= 0) {            
