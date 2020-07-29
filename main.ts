@@ -27,6 +27,11 @@ namespace bottyboy {
     }
 
     //% block
+    export function stopStrip() {
+        strip.clear()
+    }    
+
+    //% block
     export function emptyTemplate() {
         
     }
