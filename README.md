@@ -1,5 +1,6 @@
 
-> Open this page at [https://zdam.github.io/pxt-microbitminismartrobotcar/](https://zdam.github.io/pxt-microbitminismartrobotcar/)
+
+Helper functions for [https://wiki.keyestudio.com/Ks0426_keyestudio_Micro:bit_Mini_Smart_Robot_Car_Kit_V2]([https://wiki.keyestudio.com/Ks0426_keyestudio_Micro:bit_Mini_Smart_Robot_Car_Kit_V2])
 
 ## Use as Extension
 
