@@ -15,6 +15,7 @@ namespace bottyboy {
             `)
     }
 
+    //% block
     export function flashStrip() {
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
         basic.pause(200)
