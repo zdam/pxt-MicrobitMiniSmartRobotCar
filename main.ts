@@ -44,7 +44,27 @@ namespace bottyboy {
     
 
     //% block
-    export function moveForward() {
+    export function moveForwardForTime(time) {
+        executeForTimeLength(time, moveForward, stopMoving)
+    }
+
+    //% block
+    export function moveBackwardForTime(time) {
+        executeForTimeLength(time, moveBackward, stopMoving)
+    }
+    
+    //% block
+    export function turnLeftForTime(time) {
+        executeForTimeLength(time, turnLeft, stopMoving)
+    }     
+
+    //% block
+    export function turnRightForTime(time) {
+        executeForTimeLength(time, turnRight, stopMoving)
+    }    
+
+    //% block
+    export function moveForward() {        
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED1, 0, 67)
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED2, 100, 67)
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 0, 67)
@@ -52,7 +72,7 @@ namespace bottyboy {
     }
 
     //% block
-    export function moveBackwards() {
+    export function moveBackward() {
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED1, 100, 67)
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED2, 50, 67)
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 100, 67)
@@ -82,6 +102,18 @@ namespace bottyboy {
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 0, 67)
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED4, 50, 67)        
     }    
+
+    //% block
+    export function executeForTimeLength(time, runFunction, endFunction) {
+        let innerTime = time
+        runFunction()
+        while (innerTime >= 0) {            
+            basic.pause(1000)
+            innerTime += -1
+        }
+        endFunction()
+        
+    }
 
 }
 
