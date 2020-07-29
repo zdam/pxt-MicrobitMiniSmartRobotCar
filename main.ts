@@ -1,8 +1,11 @@
 //% color="#AA278D" weight=100
 namespace bottyboy {
 
+    let strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB)
+    strip.clear()
+
     //% block
-    export function tester() {
+    export function showLeds() {
         basic.showLeds(`
             # # # # #
             # . # . #
@@ -11,10 +14,8 @@ namespace bottyboy {
             # # # # #
             `)
     }
-    tester()
-    let strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB)
-    strip.clear()
-    basic.forever(function () {
+
+    export function flashStrip() {
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
         basic.pause(200)
         strip.showColor(neopixel.colors(NeoPixelColors.Green))
@@ -22,7 +23,9 @@ namespace bottyboy {
         strip.showColor(neopixel.colors(NeoPixelColors.Blue))
         basic.pause(200)
         basic.pause(200)
-    })
+    }
+
+
 }
 
 
