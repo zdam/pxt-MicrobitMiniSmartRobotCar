@@ -26,7 +26,22 @@ namespace bottyboy {
         basic.pause(200)
     }
 
+    //% block
+    export function emptyTemplate() {
+        
+    }
 
+    //% block
+    export function newOne() {
+        basic.showLeds(`
+            # . . . #
+            # . . . #
+            # # # # #
+            # . # . #
+            # # # # #
+            `)    
+    }
+    
 }
 
 
