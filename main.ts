@@ -44,12 +44,44 @@ namespace bottyboy {
     
 
     //% block
-    export function moveTest() {
+    export function moveForward() {
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED1, 0, 67)
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED2, 100, 67)
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 0, 67)
         PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED4, 100, 67)
     }
+
+    //% block
+    export function moveBackwards() {
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED1, 100, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED2, 50, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 100, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED4, 50, 67)
+    }    
+
+    //% block
+    export function stopMoving() {
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED1, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED2, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED4, 0, 67)        
+    }    
+
+    //% block
+    export function turnLeft() {
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED1, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED2, 50, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED4, 100, 67)        
+    }
+
+    //% block
+    export function turnRight() {
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED1, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED2, 100, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED3, 0, 67)
+        PCA9685.setLedDutyCycle(PCA9685.LEDNum.LED4, 50, 67)        
+    }    
 
 }
 
