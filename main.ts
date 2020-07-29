@@ -117,8 +117,8 @@ namespace bottyboy {
         let innerTime = time
         runFunction()
         while (innerTime >= 0) {            
-            basic.pause(1000)
-            innerTime += -1
+            basic.pause(100)
+            innerTime += -.1
         }
         endFunction()
         
