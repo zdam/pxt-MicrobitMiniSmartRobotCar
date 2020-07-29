@@ -1,21 +1,28 @@
-function tester () {
-    basic.showLeds(`
-        # # # # #
-        # . # . #
-        # # # # #
-        # . # . #
-        # # # # #
-        `)
+//% color="#AA278D" weight=100
+namespace bottyboy {
+
+    //% block
+    export function tester() {
+        basic.showLeds(`
+            # # # # #
+            # . # . #
+            # # # # #
+            # . # . #
+            # # # # #
+            `)
+    }
+    tester()
+    let strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB)
+    strip.clear()
+    basic.forever(function () {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Green))
+        basic.pause(200)
+        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+        basic.pause(200)
+        basic.pause(200)
+    })
 }
-tester()
-let strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB)
-strip.clear()
-basic.forever(function () {
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
-    basic.pause(200)
-    strip.showColor(neopixel.colors(NeoPixelColors.Green))
-    basic.pause(200)
-    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
-    basic.pause(200)
-    basic.pause(200)
-})
+
+
